@@ -25,7 +25,6 @@ public class Game {
       for (Trade trade : player.getTrades()) {
         double activeTradeProfitLoss = m1.getProfitLossOnTrade(trade);
         double changeInTradeProftiLoss = activeTradeProfitLoss - trade.getTradeProfitLoss();
-        System.out.println(changeInTradeProftiLoss);
         player.updateBalance(changeInTradeProftiLoss);
         trade.setTradeProfitLoss(activeTradeProfitLoss);
       }

@@ -28,4 +28,7 @@ public class Player {
   public ArrayList<Trade> getTrades() {
     return listOfTrades;
   }
+  public String getName() {
+    return name;
+  }
 }
