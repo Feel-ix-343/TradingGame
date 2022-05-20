@@ -1,7 +1,9 @@
 import Markets.MarketSimulator;
+import Trades.Trade;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
@@ -11,6 +13,8 @@ import java.util.concurrent.Future;
 class Main {
   private static Scanner s = new Scanner(System.in);
   private static final String CLEAR_LINE = "\033[K";
+  private static Game game;
+  private static MarketSimulator market;
   public static void main(String[] args) throws IOException {
     // TODO: Deal with IO exceptions with the API
 
@@ -35,6 +39,7 @@ class Main {
     Player player2 = new Player(name);
 
     // TODO: Chosing type of market
+
     // Execute on new thread
     Runnable r = new Runnable() {
       public void run() {
@@ -58,43 +63,81 @@ class Main {
     };
     Thread t = new Thread(r);
     t.start();
-    MarketSimulator market;
     // Get the type of game the user wants to play, then assign it
-    market = new MarketSimulator(stockTicker, 100);
+
+    market = new MarketSimulator(stockTicker, 5);
     t.stop();
     System.out.println();
     System.out.println("Market Started");
+    System.out.println();
 
 
-    Game game = new Game(market, new Player[]{player1, player2});
+    game = new Game(market, new Player[]{player1, player2});
 
     boolean running = true;
-    while (running) {
+    do {
       // TODO: Include the pervious prices in the summary
       System.out.println(market.getSummary());
-      makeTrade(game, player1);
-      makeTrade(game, player2);
+      if (market.getDay() != 0) System.out.println(displayPlayerProfitLoss(player1));
+      makeTrade(player1);
+      if (market.getDay() != 0) System.out.println(displayPlayerProfitLoss(player2));
+      makeTrade(player2);
       // TODO: game.getSummary();
-      game.nextPeriod();
-    }
+    } while (game.nextPeriod());
+    System.out.println(player1.getName() + "'s total portfolio value: " + player1.getPortfolioValue());
+    System.out.println(player2.getName() + "'s total portfolio value: " + player2.getPortfolioValue());
   }
-  public static void makeTrade(Game game, Player player) {
+  public static void makeTrade(Player player) {
     System.out.print(player.getName() + " (b)uy/cover or (s)ell/short or (enter) to do nothing: ");
     String tradeType = s.nextLine();
     if (tradeType.equals("b")) {
-      System.out.print("Enter number of shares: ");
+      System.out.print("| Enter number of shares: ");
       int nOfShares = s.nextInt();
-      game.makeTrade(player, nOfShares);
+      s.nextLine();
+      boolean result = game.makeTrade(player, nOfShares);
+      if (!result) {
+        System.out.println("| You do not have enough money! try again");
+        makeTrade(player);
+      }
+      System.out.println(displayTradeSummary(player));
     } else if (tradeType.equals("s")) {
-      System.out.print("Enter number of shares: ");
+      System.out.print("| Enter number of shares: ");
       int nOfShares = s.nextInt();
-      game.makeTrade(player, -nOfShares);
+      s.nextLine();
+      boolean result = game.makeTrade(player, -nOfShares);
+      if (!result) {
+        System.out.println("| You do not have enough money! try again");
+        makeTrade(player);
+      }
+      System.out.println(displayTradeSummary(player));
     }
-    return;
+    System.out.println(displayPlayerSummary(player));
+    System.out.println();
   }
 
   public static String displayTurnStart(Player p1, Player p2) {
     // Display balance, name, stock being traded, ?previous stock values?
     return "";
+  }
+  public static String displayTradeSummary(Player p) {
+    ArrayList<Trade> tradeArrayList = p.getTrades();
+    Trade recentTrade = tradeArrayList.get(tradeArrayList.size() - 1);
+    return "| " + market.getTradeSummary(recentTrade);
+  }
+
+  public static String displayPlayerSummary(Player p) {
+    int netShares = game.getNetShares(p);
+    return "| " + p.getName() + " porfolio summary:\n" +
+            "| | Net shares: " + netShares + "\n" +
+            "| | Account Balance: " +  p.getBalance() + "\n" +
+            "| | Portfolio value: " + p.getPortfolioValue();
+  }
+
+  public static String displayPlayerProfitLoss(Player p) {
+    double pl = 0;
+    for (Trade t : p.getTrades()) {
+      pl += t.getTradeProfitLoss();
+    }
+    return "| " + p.getName() + "'s account has total profit/loss " + pl;
   }
 }

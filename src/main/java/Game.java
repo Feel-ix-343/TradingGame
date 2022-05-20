@@ -25,18 +25,26 @@ public class Game {
       for (Trade trade : player.getTrades()) {
         double activeTradeProfitLoss = m1.getProfitLossOnTrade(trade);
         double changeInTradeProftiLoss = activeTradeProfitLoss - trade.getTradeProfitLoss();
-        player.updateBalance(changeInTradeProftiLoss);
         trade.setTradeProfitLoss(activeTradeProfitLoss);
       }
     }
     return nextDayResult;
   }
 
-  public void makeTrade(Player player, int quantity) {
+  public boolean makeTrade(Player player, int quantity) {
     // CHECK INSTANCE OF FOR THE MARKETSIMULATOR FOR THE TYPE OF TRADE TODO
     // TODO: Check if a trade closes another trade, and dont place a new order
     Trade newTrade = new Trade(m1.getActivePrice(), quantity);
+    if (Math.abs(newTrade.getInitialTradeAmount()) > player.getBalance()) return false;
     player.addTrade(newTrade);
     player.updateBalance(-newTrade.getInitialTradeAmount());
+    return true;
+  }
+  public int getNetShares(Player p) {
+    int netShares = 0;
+    for (Trade t : p.getTrades()) {
+      netShares += t.getQuantity();
+    }
+    return netShares;
   }
 }

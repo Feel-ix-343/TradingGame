@@ -75,7 +75,19 @@ public class MarketSimulator {
     // TODO
   }
   public String getSummary(){
-    return "Close: " + getActivePrice() + "\n" +
-            "Day: " + (day + 1) + "\n";
+    if (day >= 1)
+      return "Day: " + (day + 1) + " of " + gameLength +  "\n" +
+              "Close: " + getActivePrice() + "\n" +
+              "Change per share: " + (getActivePrice() - priceData.get(day - 1).getClose().doubleValue()) + "\n";
+    else
+      return "Day: " + (day + 1) + " of " + gameLength +  "\n" +
+              "Close: " + getActivePrice() + "\n";
+
+  }
+  public String getTradeSummary(Trade trade) {
+    return trade.getQuantity() + " shares exchanged at " + trade.getPurchasePrice() + " for a total of " + trade.getInitialTradeAmount();
+  }
+  public int getDay() {
+    return day;
   }
 }
