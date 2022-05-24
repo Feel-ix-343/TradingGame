@@ -2,18 +2,19 @@ package Trades;
 import java.util.Calendar;
 import Markets.*;
 public class FuturesTrade extends Trade {
-  private double priceTarget;
-  private Calendar experationDate;
-  private futuresTradeType tradeType;
+  private final double priceTarget;
+  private final Calendar experationDate;
+  private final futuresTradeType tradeType;
   
   public static enum futuresTradeType { BUY, SHORT };
-  public FuturesTrade(double purchasePrice, int quantity, double priceTarget, int tradeLength, futuresTradeType tradeType, Calendar activeDay) {
-    super(purchasePrice, quantity);
+  public FuturesTrade(double purchasePrice, int quantity, MarketSimulator marketSimulator, double priceTarget,
+                      int tradeLength, futuresTradeType tradeType, Calendar activeDate) {
+    super(purchasePrice, quantity, marketSimulator);
     this.priceTarget = priceTarget;
     this.tradeType = tradeType;
 
     // Set experationdate ---------------------
-    experationDate = activeDay; // Change this to the active date
+    this.experationDate = (Calendar) activeDate.clone(); // Change this to the active date
     experationDate.add(Calendar.DATE, tradeLength);
     // ----------------------------------------
   }

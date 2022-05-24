@@ -5,10 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c74c12bc-ee94-42b3-bb9e-e421fc99d86d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Markets/BinarySimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Markets/BinarySimulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Markets/FuturesSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Markets/FuturesSimulator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Markets/MarketSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Markets/MarketSimulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Trades/BinaryTrade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Trades/BinaryTrade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Trades/FuturesTrade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Trades/FuturesTrade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Trades/Trade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Trades/Trade.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +31,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -42,19 +52,26 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/felix/coding/SCS/TradingGame/src/main/java&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Shell Script&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="Markets" />
     </key>
   </component>
   <component name="RunManager">
@@ -72,6 +89,9 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c74c12bc-ee94-42b3-bb9e-e421fc99d86d" name="Changes" comment="" />
@@ -83,7 +103,34 @@
       <workItem from="1652996527445" duration="28000" />
       <workItem from="1652996561198" duration="17046000" />
       <workItem from="1653043430122" duration="4332000" />
-      <workItem from="1653049462913" duration="5122000" />
+      <workItem from="1653049462913" duration="5747000" />
+      <workItem from="1653060711354" duration="4600000" />
+      <workItem from="1653091346920" duration="2509000" />
+      <workItem from="1653147287585" duration="70000" />
+      <workItem from="1653147367494" duration="478000" />
+      <workItem from="1653176625163" duration="333000" />
+      <workItem from="1653177785258" duration="222000" />
+      <workItem from="1653178206143" duration="100000" />
+      <workItem from="1653178519474" duration="34000" />
+      <workItem from="1653178879593" duration="82000" />
+      <workItem from="1653178970402" duration="724000" />
+      <workItem from="1653180388991" duration="16007000" />
+      <workItem from="1653227215467" duration="4474000" />
+      <workItem from="1653231717451" duration="1127000" />
+      <workItem from="1653234646274" duration="4835000" />
+      <workItem from="1653252562924" duration="497000" />
+      <workItem from="1653273964283" duration="1320000" />
+      <workItem from="1653303055258" duration="2534000" />
+      <workItem from="1653308555390" duration="2176000" />
+      <workItem from="1653321632651" duration="4004000" />
+      <workItem from="1653327716777" duration="2129000" />
+      <workItem from="1653330671842" duration="1515000" />
+      <workItem from="1653335008618" duration="2933000" />
+      <workItem from="1653354898894" duration="3982000" />
+      <workItem from="1653358903689" duration="20000" />
+      <workItem from="1653359136580" duration="90000" />
+      <workItem from="1653359961142" duration="534000" />
+      <workItem from="1653405455289" duration="2149000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1653010102186</created>
@@ -99,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653014099380</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Working Main">
+      <created>1653054749493</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1653054749493</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,9 +173,29 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="new io stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="new io stuff" />
+    <MESSAGE value="Working Main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working Main" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Markets/MarketSimulator.java</url>
+          <line>118</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Main.java</url>
+          <line>119</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Game.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Trades.Trade" memberName="profitLoss" />
@@ -129,10 +203,8 @@
     </pin-to-top-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="getTradeProfitLoss()" language="JAVA" />
-        <watch expression="getInitialTradeAmount()" language="JAVA" />
-        <watch expression="Math.max(0, day - priceActionLength)" />
-        <watch expression="getActivePrice()" language="JAVA" />
+        <watch expression="end.getTime()" language="JAVA" />
+        <watch expression="start.getTime()" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

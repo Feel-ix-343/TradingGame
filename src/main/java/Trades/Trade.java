@@ -1,11 +1,18 @@
 package Trades;
+
+import Markets.MarketSimulator;
+
 public class Trade {
-  private final double purchasePrice;
-  private final int quantity;
+  private double purchasePrice;
+  protected int quantity;
   private double profitLoss;
-  public Trade(double p, int q) {
-    purchasePrice = p;
-    quantity = q;
+  private MarketSimulator marketSimulator;
+  private boolean active;
+  public Trade(double purchasePrice, int quantity, MarketSimulator marketSimulator) {
+    this.purchasePrice = purchasePrice;
+    this.quantity = quantity;
+    active = true;
+    this.marketSimulator = marketSimulator;
   }
   public double getPurchasePrice() {
     return purchasePrice;
@@ -13,7 +20,13 @@ public class Trade {
   public int getQuantity() {
     return quantity;
   }
-  public double getInitialTradeAmount() {
+  public void changeQuantity(int quantity) {
+    this.quantity += quantity;
+  }
+  public void changePurchasePrice(double purchasePrice) {
+    this.purchasePrice = purchasePrice;
+  }
+  public double getTradeAmount() {
     return getQuantity() * getPurchasePrice();
   }
   public double getTradeProfitLoss() {
@@ -23,6 +36,18 @@ public class Trade {
     this.profitLoss = profitLoss;
   }
   public double getTradeValue() {
-    return getInitialTradeAmount() + getTradeProfitLoss();
+    return getTradeAmount() + getTradeProfitLoss();
+  }
+  public void close() {
+    active = false;
+  }
+  public boolean getActive() {
+    return active;
+  }
+  public void deactivate() {
+    active = false;
+  }
+  public MarketSimulator getMarketSimulator() {
+    return marketSimulator;
   }
 }
