@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c74c12bc-ee94-42b3-bb9e-e421fc99d86d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Markets/BinarySimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Markets/BinarySimulator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Markets/FuturesSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Markets/FuturesSimulator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Markets/MarketSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Markets/MarketSimulator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Trades/BinaryTrade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Trades/BinaryTrade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Trades/FuturesTrade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Trades/FuturesTrade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Trades/Trade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Trades/Trade.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +118,7 @@
       <workItem from="1653358903689" duration="20000" />
       <workItem from="1653359136580" duration="90000" />
       <workItem from="1653359961142" duration="534000" />
-      <workItem from="1653405455289" duration="2149000" />
+      <workItem from="1653405455289" duration="3396000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1653010102186</created>
@@ -153,7 +141,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653054749493</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Working Main">
+      <created>1653414564882</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1653414564882</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Working Main">
+      <created>1653414612168</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1653414612168</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
